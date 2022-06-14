@@ -1,28 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Roboto&display=swap');
 
+:root {
+    --text-color: #667085;
+    --main-color: #8E2424;
+  }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
-}
-
-header {
-    padding: 20px 0;
-    background-color: blanchedalmond;
+    max-width: 1440px;
+    margin: auto;
 }
 
 a {
-    color: #000;
+    color: var(--text-color);
 }
 
 a:hover {
-    color: #8E2424;
+    color: var(--main-color);
     font-weight: bold;
 }
 
-.cabecalho__navegacao {
+.barra__navegacao {
+    padding: 20px 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -38,14 +41,14 @@ a:hover {
     margin-right: 8px;
 }
 
-.cabecalho__navegacao ul {
+.barra__navegacao ul {
     font-size: 16px;
     list-style: none;
     display: flex;
-    color: #667085;
+    color: var(--text-color);
 }
 
-.cabecalho__navegacao ul li {
+.barra__navegacao ul li {
     margin: 0 10px;
 }
 
@@ -54,7 +57,7 @@ a:hover {
     height: 44px;
     margin-left: 10px;
     border: 1px solid transparent;
-    background-color: #8E2424;
+    background-color: var(--main-color);
     color: #FFF;
     padding: 10px 18px; 
     border-radius: 10px;
@@ -67,9 +70,163 @@ a:hover {
     transition: 0.2s;
 }
 
-.primeiro__container {
+.cabecalho {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     text-align: center;
     height: 407px;
     padding: 96px 0px 96px 0px;
-    background-color: aqua;
+}
+
+span {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.vagas__abertas {
+    background-color: rgba(142, 36, 36, 0.05);
+    border-radius: 16px;
+    font-size: 14px;
+    padding: 4px 12px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.dados__empresa {
+    height: 288px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align:start; 
+    padding: 0 8em 8em ;
+    gap: 64px;
+}
+
+.dados {
+    margin: 0px; 
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 60px;
+    color: var(--main-color);
+    line-height: 72px;
+}
+
+h6 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 12px 0 8px 0;
+}
+
+.cabecalho__vagas {
+    font-size: 20px;
+    text-align: center;
+    padding: 96px 0 96px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+}
+
+.imagem__reuniao {
+    margin-top: 64px;
+}
+
+.descricao__vagas {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo__vaga {
+    margin-bottom: 54px;
+}
+
+.titulo__vaga h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.vaga {
+    width: 768px;
+    padding: 24px 24px 28px;
+    border: 1px solid #EAECF0; 
+    border-radius: 16px;
+    margin: 24px auto;
+}
+
+.vaga h5 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.depoimentos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: rgba(196, 25, 25, 0.03);
+    border-radius: 16px;
+    padding: 64px;
+    max-width: 1216px;
+    margin-bottom: 96px;
+    text-align: center;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 20px;
+    color: #667085;
+    margin-top: 32px;
+}
+
+.perfil .name {
+    font-weight: bold;
+    color: #101828;
+    line-height: 24px;
+    margin-top: 16px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color:#F9FAFB ;
+    text-align: center;
+    padding: 96px 0;
+    gap: 32px;
+}
+
+.cadastro input {
+    width: 360px;
+    height: 48px;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    padding: 16px 12px;
+}
+
+.cadastro button {
+    background-color: #8E2424;
+    width: 116px;
+    height: 48px;
+    color: #FFF;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-left: 16px;
 }
